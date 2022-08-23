@@ -1,0 +1,124 @@
+﻿<!-- Main Sidebar Container -->
+@*<aside class="main-sidebar sidebar-dark-orange elevation-4">*@
+<aside class="main-sidebar sidebar-light-cyan elevation-3">
+    <!-- Brand Logo -->
+    <a href="~/Home/Index" class="brand-link">
+        <img src="~/img/yo.jpeg" alt="Uduan Hurtado" class="brand-image img-circle elevation-3">
+        <span class="brand-text font-weight-light">Administrador</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                @*@if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Control") || User.IsInRole("Admin"))
+                        {*@
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link active" style="background-color:goldenrod">
+                        <i class="far fa-folder"></i>
+                        <p>
+                            Datos Personales
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        <li class="nav-item">
+                            <a href="~/Registros/Index" class="nav-link active" >
+                                <img src="~/img/registro.png">
+                                <p>Registro</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                @*}*@
+                @*}*@
+
+                @*@if (User.Identity.IsAuthenticated)
+                {
+                    if (User.IsInRole("Admin"))
+                    {*@
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active" style="background-color:goldenrod">
+                            <i class="far fa-folder"></i>
+                            <p>
+                                Control Adiministrativo
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="~/Identity/Account/Manage/Index" class="nav-link active">
+                                    <img src="~/img/userinfo.png">
+                                    <p>Datos personales</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="~/Role/Create" class="nav-link active">
+                                    <img src="~/img/roles.png">
+                                    <p>Crear Roles</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="~/Role/AddUserToRole" class="nav-link active">
+                                    <img src="~/img/asignar.png">
+                                    <p>Asignar Roles</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="~/Role/Index" class="nav-link active">
+                                    <img src="~/img/Users.png">
+                                    <p>Usuarios</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    @*}*@
+                @*}*@
+
+                @*@if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Admin") || User.IsInRole("Invitado"))
+                        {*@
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link active" style="background-color:goldenrod">
+                        <i class="far fa-folder"></i>
+                        <p>
+                            Reportes
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Registros/Imprimir" class="nav-link active" target="_blank">
+
+                                <img src="~/img/reporte.png">
+                                <p>Reportes</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="~/Registros/DescargarPDF" class="nav-link active">
+                                <img src="~/img/pdf.png">
+                                <p>Reportes Pdf</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                @*}*@
+                @*}*@
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

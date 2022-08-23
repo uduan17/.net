@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyApp</title>
+
+    <partial name="_Estilos" />
+
+    <link rel="icon" type="image/jpg" href="" />
+    @await RenderSectionAsync("Styles", required: false)
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-lg-footer-fixed">
+    <div class="wrapper" style="top:5px">
+        <partial name="_Navbar" />
+        <partial name="_Sidebar" />
+        @RenderBody()
+        <partial name="_Footer" />
+        <partial name="_Script" />
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+</body>
+</html>
